@@ -9,13 +9,13 @@ data class Member(
         internal val firstName: String,
         internal val lastName: String
 ) {
-    override fun toString(): String = "$firstName $lastName (vk.com/id$id)"
+    override fun toString() = "$firstName $lastName (vk.com/id$id)"
 
     companion object {
-        fun parseUserXtrRoleToMember(list: List<UserXtrRole>): List<Member> =
+        fun parseUserXtrRoleToMember(list: List<UserXtrRole>) =
                 list.map { Member(it.id, it.firstName, it.lastName) }
 
-        fun parseUserXtrCountersToMember(list: List<UserXtrCounters>): List<Member> =
+        fun parseUserXtrCountersToMember(list: List<UserXtrCounters>) =
                 list.map { Member(it.id, it.firstName, it.lastName) }
     }
 }

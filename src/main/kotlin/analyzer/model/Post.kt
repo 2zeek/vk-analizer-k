@@ -8,12 +8,10 @@ data class Post(
         internal val reposts: Int,
         internal val comments: Int
 ) {
-    override fun toString(): String {
-        return "Post[id=$id, likes=$likes, reposts=$reposts, comments=$comments]"
-    }
+    override fun toString() = "Post[id=$id, likes=$likes, reposts=$reposts, comments=$comments]"
 
     companion object {
-        fun wallpostToPost(wallpostfull: WallPostFull): Post =
+        fun wallpostToPost(wallpostfull: WallPostFull) =
                 with(wallpostfull) {
                     Post(
                             id,

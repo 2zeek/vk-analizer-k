@@ -18,13 +18,12 @@ class Utils {
 
         fun listsSeparator(list1: List<Int?>, list2: List<Int?>,
                            list3: MutableList<Int>, list4: MutableList<String>) {
-            for (id in list1) {
+            for (id in list1)
                 if (!list2.contains(id))
                     if (id!! > 0)
                         list3.add(id)
                     else
                         list4.add(id.toString())
-            }
         }
 
         fun stringToList(string: String): List<Int> =

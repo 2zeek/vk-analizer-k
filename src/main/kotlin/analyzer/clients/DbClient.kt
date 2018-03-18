@@ -14,7 +14,6 @@ class DbClient {
     }
 
     fun createConnection(): Connection {
-
         val ds = HikariDataSource()
         ds.jdbcUrl = "jdbc:postgresql://127.0.0.1:5432/db1"
         ds.username = "postgres"
